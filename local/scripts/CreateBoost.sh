@@ -20,6 +20,7 @@ date="2015-05-13"
 ## (2) Additional resources we require and need to test for
 ##
 ## 'progs' lists the programs we need
+## bcp is program you may need to install (http://www.boost.org/doc/libs/1_59_0/tools/bcp/doc/html/index.html)
 progs="bcp"
 
 
@@ -118,8 +119,9 @@ bcp --boost=${boostroot}  ${boostlibs}  ${pkgincl}   > /dev/null  2>&1
 # Plus fusion (cf [github] issue ticket #7)
 # Plus graph (cf [github] issue ticket #9)
 # Plus multiprecsion (cf [github] issue ticket #12)
+# Plus icl
 boostextras="filesystem random unordered spirit foreach math algorithm iostreams \
-            dynamic_bitset heap any circular_buffer geometry fusion graph multiprcecision"
+            dynamic_bitset heap any circular_buffer geometry fusion graph multiprcecision icl"
 
 bcp --boost=${boostroot}  ${boostextras}   ${pkgincl}   > /dev/null   2>&1
 
